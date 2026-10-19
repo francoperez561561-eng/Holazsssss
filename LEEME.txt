@@ -1,0 +1,6 @@
+GATO TON — sitio web estático
+================================
+Abrí index.html en un navegador para ver la web.
+Dejá index.html, logo-gato-ton.png y Gato-Ton.apk en la misma carpeta.
+El botón de descarga enlaza al APK incluido.
+La maqueta interactiva del reproductor es demostrativa y no reproduce audio.

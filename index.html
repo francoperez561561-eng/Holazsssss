@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff4fa3">
+<meta name="description" content="Gato Ton: reproductor de música offline para Android. Tu música, en tu teléfono, sin WiFi ni datos.">
+<title>Gato Ton — Tu música, a tu manera</title>
+<style>
+:root{--pink:#ff4fa3;--pink2:#ff79ba;--bg:#08070a;--panel:#141117;--panel2:#1d1820;--text:#fff8fc;--muted:#bcb0bc;--line:#342633}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#351327 0,transparent 48%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:.2px}.brand img{width:42px;height:42px;object-fit:contain;border-radius:12px}.brand span{font-size:1.15rem}.navlinks{display:flex;gap:22px}.navlinks a{font-size:.92rem;color:var(--muted);text-decoration:none}.navlinks a:hover{color:var(--pink)}
+.hero{min-height:610px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding:50px 0 76px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #62304c;background:#24121e;color:#ffabd2;border-radius:999px;padding:6px 12px;font-size:.82rem;font-weight:750}.dot{width:7px;height:7px;background:var(--pink);border-radius:50%;box-shadow:0 0 14px var(--pink)}h1{font-size:clamp(3.2rem,7vw,6.2rem);line-height:.96;letter-spacing:-.065em;margin:22px 0}h1 em{font-style:normal;color:var(--pink)}.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:#d5c9d3;max-width:590px}.actions{display:flex;flex-wrap:wrap;gap:13px;margin:30px 0 14px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:0;border-radius:15px;padding:15px 22px;font-size:1rem;font-weight:850;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-3px)}.btn-primary{background:var(--pink);color:#1a0711;box-shadow:0 12px 35px #ff4fa32e}.btn-primary:hover{background:var(--pink2);box-shadow:0 16px 40px #ff4fa344}.btn-secondary{border:1px solid var(--line);background:#151016;color:var(--text)}.tiny{font-size:.84rem;color:var(--muted)}.logo-stage{position:relative;display:grid;place-items:center;min-height:380px}.halo{position:absolute;width:min(360px,80vw);aspect-ratio:1;border-radius:50%;background:var(--pink);opacity:.12;filter:blur(25px)}.logo-card{position:relative;width:min(390px,90%);aspect-ratio:1;background:#050505;border:1px solid #382331;border-radius:34px;display:grid;place-items:center;box-shadow:0 30px 100px #0009;overflow:hidden;transform:rotate(2deg)}.logo-card img{width:100%;height:100%;object-fit:contain;transition:transform .4s}.logo-card:hover img{transform:scale(1.04) rotate(-2deg)}.floating{position:absolute;bottom:12px;left:0;background:#1a141b;border:1px solid var(--line);padding:12px 16px;border-radius:16px;font-size:.9rem;box-shadow:0 12px 35px #0008}.floating b{color:var(--pink)}
+section{padding:72px 0}.section-head{max-width:650px;margin-bottom:30px}.kicker{color:var(--pink);font-weight:850;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.04em;margin:10px 0 14px}.sub{color:var(--muted);font-size:1.05rem}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:linear-gradient(145deg,#19131b,#100d12);border:1px solid var(--line);border-radius:22px;padding:24px;transition:transform .2s,border-color .2s}.feature:hover{transform:translateY(-5px);border-color:#a13c70}.ico{width:46px;height:46px;display:grid;place-items:center;background:#321528;color:var(--pink);border-radius:14px;font-size:1.35rem;margin-bottom:16px}.feature h3{margin:0 0 8px;font-size:1.1rem}.feature p{margin:0;color:var(--muted);font-size:.95rem}.demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}.player{max-width:390px;width:100%;margin:auto;background:linear-gradient(160deg,#201622,#0d0b10);border:1px solid #563044;border-radius:30px;padding:22px;box-shadow:0 25px 80px #0008}.player-top{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem}.cover{margin:22px auto 18px;width:180px;aspect-ratio:1;border-radius:24px;overflow:hidden;background:#050505;display:grid;place-items:center;box-shadow:0 12px 30px #0008}.cover img{width:100%;height:100%;object-fit:contain}.song{text-align:center}.song strong{display:block;font-size:1.18rem}.song span{color:var(--muted);font-size:.9rem}.progress{margin:22px 0 6px}.progress input{width:100%;accent-color:var(--pink);cursor:pointer}.times{display:flex;justify-content:space-between;color:var(--muted);font-size:.75rem}.controls{display:flex;justify-content:center;align-items:center;gap:18px;margin:20px 0}.control{background:none;border:0;color:var(--text);font-size:1.15rem;cursor:pointer}.play{width:54px;height:54px;border-radius:50%;border:0;background:var(--pink);color:#160711;font-size:1.25rem;cursor:pointer}.player-note{text-align:center;color:var(--muted);font-size:.78rem}.checklist{list-style:none;padding:0;margin:22px 0}.checklist li{padding:10px 0;border-bottom:1px solid #29212a;color:#e4dbe3}.checklist li::before{content:'✓';color:var(--pink);font-weight:900;margin-right:12px}.notice{border:1px solid #49313f;background:#171018;border-radius:20px;padding:24px;display:flex;gap:16px}.notice .symbol{font-size:1.5rem}.notice p{margin:0;color:#d3c6d1}.credits{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.chip{border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:#ded2dc;background:#151016;font-size:.9rem}.download{padding:75px 0}.download-box{position:relative;overflow:hidden;text-align:center;border-radius:30px;padding:clamp(30px,6vw,65px);border:1px solid #8e315f;background:radial-gradient(ellipse at 50% 0,#53213d,#1b111b 58%,#100d12)}.download-box h2{max-width:680px;margin:12px auto}.download-box p{color:#e0cbd9;max-width:590px;margin:0 auto 25px}.download-box .btn{font-size:1.12rem;padding:18px 28px}.download-meta{margin-top:14px;font-size:.82rem;color:#c9b4c4}footer{padding:28px 0;border-top:1px solid #2b202a;color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff0f8;color:#1a0711;padding:12px 18px;border-radius:14px;font-weight:750;transition:.25s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.navlinks{gap:12px}.navlinks a{font-size:.8rem}.hero{grid-template-columns:1fr;padding-top:38px;gap:20px}.hero-copy{text-align:center}.lead{margin-inline:auto}.actions{justify-content:center}.logo-stage{min-height:300px}.logo-card{width:min(310px,82%)}.floating{left:5%;bottom:0}.features{grid-template-columns:1fr 1fr}.demo{grid-template-columns:1fr}.demo-copy{order:-1}section{padding:54px 0}}
+@media(max-width:480px){.wrap{width:min(100% - 26px,1120px)}.navlinks a:nth-child(2){display:none}.features{grid-template-columns:1fr}.brand span{font-size:1rem}.btn{width:100%}.actions{width:100%}.logo-stage{min-height:270px}.floating{font-size:.8rem}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#inicio" aria-label="Gato Ton, inicio"><img src="logo-gato-ton.png" alt="Logo rosa de Gato Ton"><span>GATO TON</span></a>
+  <nav class="navlinks" aria-label="Navegación"><a href="#funciones">Funciones</a><a href="#demo">Vista previa</a><a href="#creditos">Créditos</a></nav>
+</header>
+<main>
+<section class="wrap hero" id="inicio">
+  <div class="hero-copy">
+    <span class="eyebrow"><span class="dot"></span> BETA CERRADA · ANDROID</span>
+    <h1>Tu música.<br><em>Tus reglas.</em></h1>
+    <p class="lead">Gato Ton es un reproductor de música offline para Android. Escuchá las canciones que ya tenés en tu teléfono, sin WiFi, sin datos y sin cuenta.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="Gato-Ton.apk" download><span>↓</span> Descargar APK</a>
+      <a class="btn btn-secondary" href="#funciones">Conocer funciones <span>↘</span></a>
+    </div>
+    <p class="tiny">Gratis · Sin anuncios integrados · La música se queda en tu dispositivo</p>
+  </div>
+  <div class="logo-stage"><div class="halo"></div><div class="logo-card"><img src="logo-gato-ton.png" alt="Logo de Gato Ton: silueta de gato rosa sobre fondo negro"></div><div class="floating">Hecho con <b>♥</b> para escuchar a tu manera</div></div>
+</section>
+<section id="funciones">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Lo que podés hacer</span><h2>Todo lo que necesitás.<br>Sin vueltas.</h2><p class="sub">Una biblioteca musical simple, personal y guardada en tu propio teléfono.</p></div>
+    <div class="features">
+      <article class="feature"><div class="ico">♫</div><h3>Controles completos</h3><p>Reproducir, pausar, canción anterior y siguiente, repetir en bucle, aleatorio y favoritos ♥.</p></article>
+      <article class="feature"><div class="ico">🐱</div><h3>Barra gatuna</h3><p>Una cabeza de gatito acompaña el progreso de la canción. Arrastrala para saltar al momento que quieras.</p></article>
+      <article class="feature"><div class="ico">▤</div><h3>Tus playlists</h3><p>Creá, renombrá y eliminá listas para organizar la música como más te guste.</p></article>
+      <article class="feature"><div class="ico">✎</div><h3>Personalizá canciones</h3><p>Editá el nombre, el artista y la portada de cada tema de tu biblioteca.</p></article>
+      <article class="feature"><div class="ico">⌕</div><h3>Encontrá todo rápido</h3><p>Buscá en tu biblioteca y entrá a una pestaña dedicada a tus canciones favoritas.</p></article>
+      <article class="feature"><div class="ico">▣</div><h3>Tu música queda tuya</h3><p>Guarda en el teléfono las canciones añadidas, playlists, favoritos y los cambios que hagas.</p></article>
+    </div>
+  </div>
+</section>
+<section id="demo">
+  <div class="wrap demo">
+    <div class="player" aria-label="Vista previa interactiva decorativa del reproductor">
+      <div class="player-top"><span>GATO TON</span><span>● OFFLINE</span></div>
+      <div class="cover"><img src="logo-gato-ton.png" alt="Logo de Gato Ton"></div>
+      <div class="song"><strong id="trackTitle">Tu próxima canción</strong><span id="trackArtist">Tu biblioteca, tu estilo</span></div>
+      <div class="progress"><input id="seek" type="range" min="0" max="100" value="37" aria-label="Mover progreso de canción"><div class="times"><span id="elapsed">1:12</span><span id="duration">3:14</span></div></div>
+      <div class="controls"><button class="control" id="shuffle" aria-label="Alternar aleatorio" title="Aleatorio">⤨</button><button class="control" id="prev" aria-label="Canción anterior" title="Anterior">◀|</button><button class="play" id="play" aria-label="Reproducir o pausar">▶</button><button class="control" id="next" aria-label="Canción siguiente" title="Siguiente">|▶</button><button class="control" id="fav" aria-label="Marcar favorito" title="Favorito">♡</button></div>
+      <p class="player-note" id="playerNote">Vista previa ilustrativa · no reproduce audio</p>
+    </div>
+    <div class="demo-copy"><span class="kicker">Cómo se siente</span><h2>Oscuro, rosa y bien gatuno.</h2><p class="sub">Una interfaz con personalidad, pensada para que tu música sea la protagonista. Probá los controles de esta maqueta: son interactivos, aunque no reproducen audio real.</p><ul class="checklist"><li>Interfaz en rosa y negro</li><li>Biblioteca local, sin cuenta</li><li>Diseño directo y fácil de usar</li><li>Tu contenido permanece en el dispositivo</li></ul></div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="notice"><div class="symbol">ⓘ</div><div><h3 style="margin:0 0 6px">Lo que Gato Ton no es</h3><p>No incluye, aloja ni distribuye música ni contenido protegido por derechos de autor. Tampoco sube tus archivos a servidores. Gato Ton trabaja únicamente con los archivos que ya tenés en tu dispositivo.</p></div></div>
+  </div>
+</section>
+<section id="creditos">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Detrás del proyecto</span><h2>Hecho entre personas.</h2><p class="sub">Gato Ton es un proyecto sin fines de lucro, de código abierto en espíritu y actualmente en beta cerrada.</p></div>
+    <div class="credits"><span class="chip">Creador · Errebezeta</span><span class="chip">Logo · Arami</span><span class="chip">Colaborador · Zero mdz</span><span class="chip">Colaborador · Famin</span><span class="chip">Colaborador · Baski</span><span class="chip">Colaborador · Benja Catamarca</span></div>
+  </div>
+</section>
+<section class="download" id="descargar">
+  <div class="wrap"><div class="download-box"><span class="eyebrow"><span class="dot"></span> ANDROID · BETA CERRADA</span><h2>Tu música te está esperando.</h2><p>Descargá Gato Ton e instalalo en tu Android. Usá tus propios archivos de audio y escuchá sin conexión.</p><a class="btn btn-primary" href="Gato-Ton.apk" download><span>↓</span> DESCARGAR GATO TON (APK)</a><div class="download-meta">Archivo APK · La instalación puede requerir que autorices apps de esta fuente en Android.</div></div></div>
+</section>
+</main>
+<footer><div class="wrap foot"><span>© Gato Ton · Proyecto sin fines de lucro</span><a href="#inicio" style="text-decoration:none">Volver arriba ↑</a><span>Rosa y negro, como tiene que ser. ♥</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const $=id=>document.getElementById(id);let playing=false,shuffle=false,favorite=false,track=0,progress=37;
+const tracks=[["Tu próxima canción","Tu biblioteca, tu estilo"],["El siguiente tema","Una canción de tu teléfono"],["Otra favorita","Solo archivos locales"]];
+function notify(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove("show"),1900)}
+function renderTrack(){ $("trackTitle").textContent=tracks[track][0];$("trackArtist").textContent=tracks[track][1];$("play").textContent=playing?"Ⅱ":"▶";$("seek").value=progress; $("fav").textContent=favorite?"♥":"♡";$("fav").style.color=favorite?"var(--pink)":"var(--text)";$("shuffle").style.color=shuffle?"var(--pink)":"var(--text)";const sec=Math.round(progress/100*194);$("elapsed").textContent=Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0")}
+$("play").addEventListener("click",()=>{playing=!playing;renderTrack();notify(playing?"Vista previa: estado reproducir":"Vista previa: pausado")});
+$("prev").addEventListener("click",()=>{track=(track+tracks.length-1)%tracks.length;progress=0;renderTrack();notify("Canción anterior (vista previa)")});
+$("next").addEventListener("click",()=>{track=shuffle?Math.floor(Math.random()*tracks.length):(track+1)%tracks.length;progress=0;renderTrack();notify("Siguiente canción (vista previa)")});
+$("shuffle").addEventListener("click",()=>{shuffle=!shuffle;renderTrack();notify(shuffle?"Aleatorio activado":"Aleatorio desactivado")});
+$("fav").addEventListener("click",()=>{favorite=!favorite;renderTrack();notify(favorite?"Agregada a favoritos (demo)":"Quitada de favoritos (demo)")});
+$("seek").addEventListener("input",e=>{progress=Number(e.target.value);renderTrack()});
+</script>
+</body></html>
